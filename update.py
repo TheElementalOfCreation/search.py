@@ -41,3 +41,4 @@ for x in files:
 file2 = open('md5Hashes/md5.txt', 'w');
 for x in files:
 	file2.write(x + '\t' + md5sNew[x] + '\n');
+file2.close();
