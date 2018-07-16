@@ -19,7 +19,7 @@ data = {};
 try:
 	file1 = open('md5Hashes/md5.txt');
 	for line in file1:
-		md5sCurrent[line.split('\t')[0]] = line.split('\t')[1];
+		md5sCurrent[line[:-1].split('\t')[0]] = line[:-1].split('\t')[1];
 	file1.close();
 except:
 	for x in files:
