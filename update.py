@@ -17,7 +17,7 @@ md5sNew = {};
 data = {};
 
 try:
-	file1 = open('md5Hases/md5.txt');
+	file1 = open('md5Hashes/md5.txt');
 	for line in file1:
 		md5sCurrent[line.split('\t')[0]] = line.split('\t')[1];
 	file1.close();
@@ -38,6 +38,6 @@ for x in files:
 		file1.close();
 
 
-file2 = open('md5Hases/md5.txt', 'w');
+file2 = open('md5Hashes/md5.txt', 'w');
 for x in files:
 	file2.write(x + '\t' + md5sNew[x] + '\n');
