@@ -30,7 +30,7 @@ try:
 	version = a.split('.');
 	a.close();
 except:
-	pass;
+	raise;
 
 print('Checking for new version...');
 
