@@ -42,6 +42,7 @@ if v[0] != version[0]:
 	print('Updating update program...');
 	f = open('Version', 'w');
 	f.write('.'.join((v[0], '-update-')));
+	f.close();
 	get(a, 'update.py');
 	get(a, 'UPDATE.bat');
 	print('Restarting...');
@@ -50,6 +51,9 @@ if v[0] != version[0]:
 elif v[1] != version[1]:
 	# Update of other file(s)
 	print('Updating files...');
+	f = open('Version', 'w');
+	f.write('.'.join((v[0], '-update-')));
+	f.close('.'.join(v));
 	for x in files:
 		get(a, x);
 
