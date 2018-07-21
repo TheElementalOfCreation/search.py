@@ -35,7 +35,7 @@ a.request('GET', url.format('Version'));
 v = a.getresponse().read().split('.');
 if v[0] != version[0]:
 	# update.py and/or UPDATE.bat update
-	f = file.open('Version');
+	f = open('Version');
 	f.write('.'.join((v[0], '-update-')));
 	get(a, 'update.py');
 	get(a, 'UPDATE.bat');
