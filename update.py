@@ -57,8 +57,8 @@ elif v[1] != version[1]:
 	for x in files:
 		get(a, x);
 
-os.envrion['PATH'] += __git__ + ';';
-os.envrion.update();
+os.environ['PATH'] += __git__ + ';';
+os.environ.update();
 subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', 'git+https://github.com/TheElementalOfCreation/creatorUtils']);
 
 print('Done');
