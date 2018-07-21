@@ -20,7 +20,7 @@ import BeautifulSoup;
 import exceptions;
 import zipfile;
 import httplib;
-from path import *; #"from path import *" means to import all functionas and varibles from "path.py"
+from creatorUtils.path import *; #"from path import *" means to import all functionas and varibles from "path.py"
 
 #----End importing necessary libraries----#
 
