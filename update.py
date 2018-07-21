@@ -61,4 +61,4 @@ os.environ['PATH'] += __git__ + ';';
 os.environ.update();
 subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', 'git+https://github.com/TheElementalOfCreation/creatorUtils']);
 
-print('Done');
+print('Done.');
