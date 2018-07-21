@@ -27,10 +27,10 @@ version = (None, None);
 
 try:
 	a = open('Version', 'r');
-	version = a.split('.');
+	version = a.read().split('.');
 	a.close();
 except:
-	raise;
+	pass;
 
 print('Checking for new version...');
 
