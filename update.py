@@ -52,8 +52,8 @@ elif v[1] != version[1]:
 	# Update of other file(s)
 	print('Updating files...');
 	f = open('Version', 'w');
-	f.write('.'.join((v[0], '-update-')));
-	f.close('.'.join(v));
+	f.write('.'.join(v));
+	f.close();
 	for x in files:
 		get(a, x);
 
