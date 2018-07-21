@@ -2,6 +2,8 @@ import httplib;
 import os;
 import subprocess;
 
+print('Initializing update program...');
+
 def get(conn, x):
 	conn.request('GET', url.format(x));
 	data = conn.getresponse().read();
@@ -30,22 +32,29 @@ try:
 except:
 	pass;
 
+print('Checking for new version...');
+
 a = httplib.HTTPSConnection('raw.githubusercontent.com');
 a.request('GET', url.format('Version'));
 v = a.getresponse().read().split('.');
 if v[0] != version[0]:
 	# update.py and/or UPDATE.bat update
+	print('Updating update program...');
 	f = open('Version', 'w');
 	f.write('.'.join((v[0], '-update-')));
 	get(a, 'update.py');
 	get(a, 'UPDATE.bat');
+	print('Restarting...');
 	exit(102);
 
 elif v[1] != version[1]:
 	# Update of other file(s)
+	print('Updating files...');
 	for x in files:
 		get(a, x);
 
 os.envrion['PATH'] += __git__ + ';';
 os.envrion.update();
 subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', 'git+https://github.com/TheElementalOfCreation/creatorUtils']);
+
+print('Done');
