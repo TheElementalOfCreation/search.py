@@ -21,7 +21,7 @@ files = [
 
 url = '/TheElementalOfCreation/search.py/master/{}';
 data = {};
-version = None;
+version = (None, None);
 
 try:
 	a = open('Version', 'r');
