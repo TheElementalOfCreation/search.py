@@ -55,6 +55,6 @@ elif v[1] != version[1]:
 	for x in files:
 		get(a, x);
 
-subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', 'git+https://github.com/TheElementalOfCreation/creatorUtils']);
+subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', '--disable-pip-version-check', 'git+https://github.com/TheElementalOfCreation/creatorUtils']);
 
 print('Done.');
