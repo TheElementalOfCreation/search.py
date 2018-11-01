@@ -14,6 +14,7 @@ def tryToCopy(source, output, num = 0):
 		except:
 			tryToCopy(source, output, num + 1);
 	except Exception as e:
+		print('\nSend a screenshot of this window to the developer. He wrote the "tryToCopy" function wrong.\n');
 		print(e);
 
 
@@ -44,11 +45,11 @@ def start():
 				raise Exception('Could not search directory. Reason: {0}'.format(e));
 			for x in probar(b):
 				tryToCopy(x, f + x.split('/')[-1]);
-			os.remove('Session filenames.out')
-			os.remove('Session paths.out')
+			os.remove('Session filenames.out');
+			os.remove('Session paths.out');
 		except:
 			raise;
 
 
 if __name__ == '__main__':
-	start()
+	start();
