@@ -33,7 +33,7 @@ except:
 print('Checking for new version...');
 
 a = httplib.HTTPSConnection('raw.githubusercontent.com');
-a.request('GET', url + 'Version'));
+a.request('GET', url + 'Version');
 v = a.getresponse().read().split('.');
 if v[0] != version[0]:
 	# update.py and/or UPDATE.bat update
