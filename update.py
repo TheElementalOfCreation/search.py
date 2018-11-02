@@ -5,7 +5,7 @@ import subprocess;
 print('Initializing update program...');
 
 def get(conn, x):
-	conn.request('GET', url.format(x));
+	conn.request('GET', url + x);
 	data = conn.getresponse().read();
 	file1 = open(x, 'wb');
 	file1.write(data);
@@ -19,7 +19,7 @@ files = [
 	'Version',
 ];
 
-url = '/TheElementalOfCreation/search.py/master/{}';
+url = '/TheElementalOfCreation/search.py/master/';
 data = {};
 version = (None, None);
 
@@ -55,6 +55,6 @@ elif v[1] != version[1]:
 	for x in files:
 		get(a, x);
 
-subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', '--disable-pip-version-check', 'git+https://github.com/TheElementalOfCreation/creatorUtils']);
+subprocess.call(['pypy2-v5.9.0-win32\\pypy.exe', '-m', 'pip', 'install', '--disable-pip-version-check', 'git+https://github.com/TheElementalOfCreation/creatorUtils', 'git+https://github.com/mattgwwalker/msg-extractor']);
 
 print('Done.');
