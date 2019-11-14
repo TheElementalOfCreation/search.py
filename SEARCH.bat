@@ -1,3 +1,3 @@
 @echo off
-pypy2-v5.9.0-win32\pypy.exe search.py
+Python36_64\python.exe search.py
 pause

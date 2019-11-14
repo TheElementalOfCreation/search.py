@@ -1,7 +1,7 @@
 @echo off
 set CONVPATH="%~dp0ImageToPDF\img2pdf.exe"
 set RESPATH=%~sdp0
-set PYPYPATH=%~sdp0pypy2-v5.9.0-win32\pypy.exe
+set PYPYPATH=%~sdp0Python36_64\python.exe
 set MSG=%~sdp0msg.py
 if '%1' == '' (
 	goto MSG
