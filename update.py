@@ -58,7 +58,7 @@ print('Checking for new version...')
 
 a = httplib.HTTPSConnection('raw.githubusercontent.com')
 a.request('GET', url + 'Version')
-v = a.getresponse().read().split('.')
+v = a.getresponse().read().decode('utf-8').split('.')
 if v[0] != version[0]:
 	# update.py and/or UPDATE.bat update
 	print('Updating update program...')
